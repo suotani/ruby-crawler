@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <table class="table table-striped table-hover">
+        <tr><th>No.</th><th>VERSION</th><th>URL</th></tr>
+        <% list.each_with_index do |item, i| %>
+          <tr>
+            <td><%= i + 1 %></td>
+            <td><%= item[1] %></td>
+            <td><a href="<%= item[0] %>" target="blank"><%= item[0] %></a></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </body>
+</html>
